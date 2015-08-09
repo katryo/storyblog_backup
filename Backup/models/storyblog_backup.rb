@@ -41,6 +41,7 @@ Model.new(:storyblog_backup, 'Backup storyblog data to S3') do
     s3.region            = 'ap-northeast-1'
     s3.bucket            = 'storyblog-backup'
     s3.path              = '/backups'
+    s3.keep = 2
   end
 
   ##
