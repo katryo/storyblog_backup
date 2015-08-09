@@ -94,6 +94,7 @@ Model.new(:storyblog_backup, 'Backup storyblog data to S3') do
     mail.domain               = "gmail.com"
     mail.user_name            = ENV['GMAIL_USERNAME_DENKINOVEL']
     mail.password             = ENV['GMAIL_PASSWORD_DENKINOVEL']
+    mail.password             = ENV['GMAIL_APPLICATION_SPECIFIC_PASSWORD_DENKINOVEL']
     mail.authentication       = "plain"
     mail.encryption           = :starttls
   end
