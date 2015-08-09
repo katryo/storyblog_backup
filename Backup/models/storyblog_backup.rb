@@ -16,7 +16,7 @@ Model.new(:storyblog_backup, 'Backup storyblog data to S3') do
   #
   database PostgreSQL do |db|
     # To dump all databases, set `db.name = :all` (or leave blank)
-    db.name               = :all
+    db.name               = 'storyblog_production'
     db.username           = ENV['POSTGRESQL_USERNAME']
     db.password           = ENV['POSTGRESQL_PASSWORD']
     db.host               = "localhost"
