@@ -21,7 +21,7 @@ Model.new(:storyblog_backup, 'Backup storyblog data to S3') do
     db.password           = ENV['POSTGRESQL_PASSWORD']
     db.host               = "localhost"
     db.port               = 5432
-    db.socket             = "/tmp/pg.sock"
+    # db.socket             = "/tmp/pg.sock"
     # When dumping all databases, `skip_tables` and `only_tables` are ignored.
     # db.skip_tables        = ["skip", "these", "tables"]
     # db.only_tables        = ["only", "these", "tables"]
