@@ -25,7 +25,7 @@ Model.new(:storyblog_backup, 'Backup storyblog data to S3') do
     # When dumping all databases, `skip_tables` and `only_tables` are ignored.
     # db.skip_tables        = ["skip", "these", "tables"]
     # db.only_tables        = ["only", "these", "tables"]
-    db.additional_options = ["-xc", "-E=utf8"]
+    # db.additional_options = ["-xc", "-E=utf8"]
   end
 
   ##
@@ -93,7 +93,6 @@ Model.new(:storyblog_backup, 'Backup storyblog data to S3') do
     mail.port                 = 587
     mail.domain               = "gmail.com"
     mail.user_name            = ENV['GMAIL_USERNAME_DENKINOVEL']
-    #mail.password             = ENV['GMAIL_PASSWORD_DENKINOVEL']
     mail.password             = ENV['GMAIL_APPLICATION_SPECIFIC_PASSWORD_DENKINOVEL']
     mail.authentication       = "plain"
     mail.encryption           = :starttls
