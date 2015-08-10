@@ -33,8 +33,8 @@ Model.new(:storyblog_backup, 'Backup storyblog data to S3') do
   #
   store_with S3 do |s3|
     # AWS Credentials
-    s3.access_key_id     = ENV['S3_ACCESS_KEY']
-    s3.secret_access_key = ENV['S3_SECRET']
+    s3.access_key_id     = ENV['AWS_ACCESS_KEY_ID']
+    s3.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
     # Or, to use a IAM Profile:
     # s3.use_iam_profile = true
 
